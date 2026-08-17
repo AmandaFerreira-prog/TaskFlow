@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskflow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+        <p>Organize suas tarefas com facilidade e tenha uma vida mais produtiva!</p>
+    </header>
+    <main>
+        <div class="container">
+            <section class="cadastro">
+                <label for="nomeTarefa">Nome da Tarefa</label>
+                <input type="text" id="nomeTarefa" placeholder="Ex.:Estudar JS">
+                
+                <label for="categoria">Categoria</label>
+                <select name="Categoria" id="categoria">
+                    <option value="estudos">Estudos</option>
+                    <option value="trabalho">Trabalho</option>
+                    <option value="pessoal">Pessoal</option>
+                </select>
+                
+                <label for="prioridade">Prioridade</label>
+                <select name="Prioridade" id="prioridade">
+                    <option value="alta">Alta</option>
+                    <option value="baixa">Baixa</option>
+                </select>
+                
+                <label for="data">Data</label>
+                <input type="date" id="data">
+                
+                <label for="status">Status</label>
+                <select name="Status" id="status">
+                    <option value="iniciar">A iniciar</option>
+                    <option value="andamento">Em andamento</option>
+                    <option value="concluida">Concluida</option>
+                </select>
+                
+
+                <button id="btnAdicionar">Adicionar Tarefa</button>
+            </section>
+
+            <section class="lista">
+                <h2>Minhas Tarefas</h2>
+                <ul id="tarefas"></ul>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
