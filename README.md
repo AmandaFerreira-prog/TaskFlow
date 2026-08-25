@@ -1,8 +1,16 @@
 # TaskFlow
 
+## Sobre
+
 Aplicação web de gerenciamento de tarefas desenvolvida com HTML, CSS e JavaScript.
 
 O projeto permite criar, editar, concluir e excluir tarefas, mantendo os dados salvos no navegador através do LocalStorage.
+
+
+![TaskFlow](./assets/imagens/TaskFlow.jpg)
+
+![TaskFlow-Tarefas](./assets/imagens/TaskFlow-tarefas.jpg)
+
 
 ## Funcionalidades
 
