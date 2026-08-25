@@ -14,6 +14,10 @@ const selectStatus=document.getElementById("status");
 const botaoAdicionar=document.getElementById("btnAdicionar");
 const listaTarefas = document.getElementById("tarefas");
 let idTarefaEditada = null;
+const filtroStatus = document.getElementById("filtroStatus");
+filtroStatus.addEventListener("change", function(){
+    atualizarTela();
+});
 
 
 function mostrarTarefaNaTela(tarefa){
@@ -116,8 +120,10 @@ function criarAçoesDaTarefa(tarefa){
 
 function atualizarTela(){
     listaTarefas.innerHTML="";
-    for(let i=0;i<tarefas.length;i++){
-        mostrarTarefaNaTela(tarefas[i]);
+    for(let i = 0; i < tarefas.length; i++){
+        if(filtroStatus.value === "todos" || filtroStatus.value === tarefas[i].status){
+            mostrarTarefaNaTela(tarefas[i]);
+        }
     }
     localStorage.setItem("tarefas", JSON.stringify(tarefas));
 
